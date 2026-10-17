@@ -64,8 +64,8 @@ def test_merge_equals_set(list1: list[int], list2: list[int]):
 
 # --- 4. AST Парсер запитів (4 тести) ---
 @pytest.mark.parametrize("tree, expected_docs", [
-    (Term("hello"), {0, 1}),
-    (And(Term("hello"), Term("stream")), {1}),
+    (Term("hello"), {0, 1}),                                # ісправіл
+    (And(Term("hello"), Term("stream")), {1}),              # тоже ісправіл
     (Or(Term("rare"), Term("stream")), {1, 2}),
     (Term("missing"), set()),
 ])
