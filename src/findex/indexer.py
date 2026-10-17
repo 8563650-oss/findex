@@ -53,7 +53,8 @@ class Index(Mapping[str, List[Posting]]):
     @timed
     def build(self, corpus_path: str | Path):
         path = Path(corpus_path)
-        for doc_id, file_path in enumerate(path.rglob("*.txt")):
+        # ДОДАНО sorted() навколо path.rglob
+        for doc_id, file_path in enumerate(sorted(path.rglob("*.txt"))):
             if file_path.is_file():
                 with open(file_path, "r", encoding="utf-8") as f:
                     text = f.read()
@@ -62,7 +63,6 @@ class Index(Mapping[str, List[Posting]]):
                 self._doc_meta[doc_id] = DocMeta(doc_id=doc_id, name=file_path.name, length=len(tokens))
                 for term, freq in term_freqs.items():
                     self._postings[term].append(Posting(doc_id=doc_id, frequency=freq))
-
     @timed
     def save(self, out_path: str):
         with open(out_path, "wb") as f:
