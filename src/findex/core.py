@@ -3,11 +3,7 @@ import unicodedata
 from pathlib import Path
 from typing import Iterator
 
-# Регулярний вираз для токенізації.
-# Правила:
-# - Включає літери та цифри (\w).
-# - Допускає дефіси та апострофи всередині слова (наприклад, "зв'язок", "будь-ласка").
-# - Не захоплює пунктуацію на початку чи в кінці слова.
+
 TOKEN_PATTERN = re.compile(r"(?u)\b\w+(?:[-']\w+)*\b")
 
 def iter_documents(corpus_path: str | Path) -> Iterator[str]:

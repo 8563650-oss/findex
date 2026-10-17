@@ -12,7 +12,7 @@ def test_tokenize_apostrophe_and_hyphen():
     assert "—" not in tokens
 
 def test_tokenize_unicode_normalization():
-    # Символ \u2163 - це римська цифра 'IV' одним символом (NFKC перетворить на 'iv')
+    
     text = "Розділ \u2163"
     assert list(tokenize(text)) == ["розділ", "iv"]
 

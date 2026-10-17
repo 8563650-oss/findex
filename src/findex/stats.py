@@ -29,7 +29,7 @@ def measure_greedy(corpus_path: str):
     tracemalloc.start()
     start_time = time.time()
     
-    # Жадібний підхід: завантажуємо всі документи в один список
+
     all_docs = []
     for file_path in Path(corpus_path).rglob("*.txt"):
         with open(file_path, "r", encoding="utf-8") as f:
@@ -37,7 +37,6 @@ def measure_greedy(corpus_path: str):
             
     doc_count = len(all_docs)
     
-    # Створюємо величезний список усіх токенів одразу
     all_tokens = []
     for doc in all_docs:
         all_tokens.extend(list(tokenize(doc)))
