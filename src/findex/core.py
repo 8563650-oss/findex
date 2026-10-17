@@ -6,7 +6,6 @@ from typing import Iterator
 TOKEN_PATTERN = re.compile(r"(?u)\b\w+(?:[-']\w+)*\b")
 
 def iter_documents(corpus_path: str | Path) -> Iterator[str]:
-    # ... тут ваш старий код ...
     path = Path(corpus_path)
     if not path.exists():
         raise FileNotFoundError(f"Директорію {path} не знайдено.")
@@ -16,25 +15,30 @@ def iter_documents(corpus_path: str | Path) -> Iterator[str]:
                 yield f.read()
 
 def tokenize(text: str) -> Iterator[str]:
-    # ... тут ваш старий код ...
     normalized_text = unicodedata.normalize("NFKC", text).lower()
     for match in TOKEN_PATTERN.finditer(normalized_text):
         yield match.group()
 
 
 import time
+import logging
 from functools import wraps
+from typing import Callable, Any, TypeVar, cast
 
-def timed(func):
-    """Декоратор для вимірювання часу виконання функції."""
+logger = logging.getLogger("findex")
+
+F = TypeVar('F', bound=Callable[..., Any])
+
+def timed(func: F) -> F:
+    """Декоратор для вимірювання часу виконання функції з логуванням."""
     @wraps(func)
-    def wrapper(*args, **kwargs):
+    def wrapper(*args: Any, **kwargs: Any) -> Any:
         start_time = time.perf_counter()
         result = func(*args, **kwargs)
         end_time = time.perf_counter()
-        print(f"[{func.__name__}] executed in {end_time - start_time:.4f} seconds.")
+        logger.debug(f"[{func.__name__}] executed in {end_time - start_time:.4f} seconds.")
         return result
-    return wrapper
+    return cast(F, wrapper)
 
 def generate_snippet(text: str, query_terms: set[str], window: int = 80) -> str:
     """Генерує сніпет із підсвіченими термінами запиту."""

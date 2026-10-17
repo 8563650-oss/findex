@@ -1,4 +1,5 @@
 import pickle
+import logging
 from collections import defaultdict, Counter
 from collections.abc import Mapping
 from pathlib import Path
@@ -8,7 +9,7 @@ from contextlib import contextmanager
 
 from findex.core import tokenize, timed
 from findex.models import Posting, DocMeta
-
+logger = logging.getLogger("findex")
 class Index(Mapping):
     """Об'єктно-орієнтований інвертований індекс."""
     def __init__(self):
@@ -74,7 +75,7 @@ class Index(Mapping):
 def open_index(path: str) -> Iterator[Index]:
     """Context manager для безпечного завантаження індексу."""
     idx = Index()
-    print(f"Opening index from {path}...")
+    logger.info(f"Opening index from {path}...")
     idx.load(path)
     try:
         yield idx
