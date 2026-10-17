@@ -28,7 +28,7 @@ dev = [
 findex = "findex.cli:app"
 
 [tool.pyright]
+include = ["src", "tests"]
 typeCheckingMode = "strict"
-# Вимикаємо кілька надто прискіпливих правил, які заважають Typer
 reportUnknownMemberType = false
 reportUnknownArgumentType = false

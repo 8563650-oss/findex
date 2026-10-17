@@ -2,6 +2,7 @@ import pytest
 from hypothesis import given, strategies as st
 from typer.testing import CliRunner
 from pathlib import Path
+from typing import Any
 
 from findex.cli import app
 from findex.core import tokenize, generate_snippet
@@ -12,6 +13,7 @@ from findex.models import Posting
 
 runner = CliRunner()
 
+# --- 1. Токенізатор (10 тестів) ---
 @pytest.mark.parametrize("text, expected", [
     ("Hello world", ["hello", "world"]),
     ("YOLOv8!", ["yolov8"]),
@@ -24,25 +26,27 @@ runner = CliRunner()
     ("C++ and C#", ["c", "and", "c"]),
     ("123 456", ["123", "456"]),
 ])
-def test_tokenizer(text, expected):
+def test_tokenizer(text: str, expected: list[str]):
     assert list(tokenize(text)) == expected
 
+# --- 2. Сніпети (Покриття core.py - 5 тестів) ---
 @pytest.mark.parametrize("text, terms, expected_in_output", [
     ("hello world python", {"python"}, "**PYTHON**"),
     ("a b c d e f g h i j k l m n o p q python", {"python"}, "..."),
     ("no match here", {"python"}, "no match here..."),
-    ("python at start", {"python"}, "**PYTHON** at ..."), # Виправлено під вікно в 10 символів
-    ("end is python", {"python"}, "end is **PYTHON**"),   # Виправлено (без зайвих трьох крапок)
+    ("python at start", {"python"}, "**PYTHON** at ..."),
+    ("end is python", {"python"}, "end is **PYTHON**"),
 ])
-def test_generate_snippet(text, terms, expected_in_output):
+def test_generate_snippet(text: str, terms: set[str], expected_in_output: str):
     snippet = generate_snippet(text, terms, window=10)
     assert expected_in_output in snippet
 
+# --- 3. Hypothesis (Merge vs Set) ---
 @given(
     st.lists(st.integers(min_value=0, max_value=100), unique=True),
     st.lists(st.integers(min_value=0, max_value=100), unique=True)
 )
-def test_merge_equals_set(list1, list2):
+def test_merge_equals_set(list1: list[int], list2: list[int]):
     expected = sorted(list(set(list1) & set(list2)))
     l1, l2 = sorted(list1), sorted(list2)
     merge_res = []
@@ -58,18 +62,19 @@ def test_merge_equals_set(list1, list2):
             j += 1
     assert merge_res == expected
 
+# --- 4. AST Парсер запитів (4 тести) ---
 @pytest.mark.parametrize("tree, expected_docs", [
     (Term("hello"), {0, 1}),
     (And(Term("hello"), Term("stream")), {1}),
     (Or(Term("rare"), Term("stream")), {1, 2}),
     (Term("missing"), set()),
 ])
-def test_ast_evaluation(populated_index, tree, expected_docs):
+def test_ast_evaluation(populated_index: Index, tree: Any, expected_docs: set[int]):
     assert tree.evaluate(populated_index) == expected_docs
 
 # --- 5. Логіка Scorer (Sanity Checks - 2 тести) ---
 @pytest.mark.parametrize("scorer_class", [TfIdfScorer, BM25Scorer])
-def test_scorer_sanity_checks(populated_index, scorer_class):
+def test_scorer_sanity_checks(populated_index: Index, scorer_class: Any):
     scorer = scorer_class()
     # 1. Рідкісний термін > Частий термін
     score_rare = scorer.score(populated_index, "rare", Posting(doc_id=2, frequency=1))
@@ -78,10 +83,11 @@ def test_scorer_sanity_checks(populated_index, scorer_class):
     # 2. Нульовий DF (термін відсутній)
     assert scorer.score(populated_index, "missing", Posting(doc_id=0, frequency=1)) == 0.0
 
-def test_index_properties_and_saveload(populated_index, tmp_path: Path):
+# --- 6. Index та CLI (5 тестів) ---
+def test_index_properties_and_saveload(populated_index: Index, tmp_path: Path):
     idx = populated_index
-    # Властивість: постінги відсортовані
-    for term, postings in idx._postings.items():
+    # type: ignore використовується для доступу до приватного поля, щоб перевірити інваріант сортування в тесті
+    for _, postings in idx._postings.items():  # type: ignore # Прямий доступ до приватного поля для тестування сортування
         doc_ids = [p.doc_id for p in postings]
         assert doc_ids == sorted(doc_ids)
         
