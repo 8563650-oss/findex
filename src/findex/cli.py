@@ -2,6 +2,12 @@ import typer
 import logging
 import json
 import sys
+import asyncio
+import time
+from rich.live import Live
+from rich.table import Table
+
+from findex.crawler import Crawler
 from pathlib import Path
 from typing import Literal
 from rich.console import Console
@@ -101,6 +107,60 @@ def search(
             table.add_row(str(i+1), f"{hit.score:.4f}", str(hit.doc_id), snippet)
 
         result_console.print(table)
+
+@app.command("crawl")
+def crawl_command(
+    start_url: str = typer.Argument(..., help="Стартова URL-адреса"),
+    out: Path = typer.Option(..., "--out", "-o", help="Шлях до вихідного JSONL-файлу"),
+    max_pages: int = typer.Option(200, help="Кількість сторінок для обходу"),
+    concurrency: int = typer.Option(20, help="Кількість одночасних запитів")
+):
+    """Асинхронний краулер веб-сторінок з експортом у JSONL."""
+    
+    # Налаштування логування у файл (crawl.log)
+    file_handler = logging.FileHandler("crawl.log", mode="w", encoding="utf-8")
+    file_handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
+    crawler_logger = logging.getLogger("findex.crawler")
+    crawler_logger.setLevel(logging.INFO)
+    crawler_logger.addHandler(file_handler)
+
+    crawler = Crawler(start_url, max_pages=max_pages, concurrency=concurrency)
+    start_time = time.perf_counter()
+
+    def generate_table() -> Table:
+        table = Table(title="Spider Status")
+        table.add_column("Метрика", style="cyan")
+        table.add_column("Значення", style="magenta")
+        
+        elapsed = time.perf_counter() - start_time
+        rps = crawler.pages_crawled / elapsed if elapsed > 0 else 0
+        
+        table.add_row("Зібрано сторінок", str(crawler.pages_crawled))
+        table.add_row("Швидкість (стор/сек)", f"{rps:.2f}")
+        table.add_row("Запитів у польоті", str(crawler.in_flight_requests))
+        table.add_row("Помилок", str(crawler.errors))
+        return table
+
+    async def run() -> None:
+        with out.open("w", encoding="utf-8") as f:
+            # Живе оновлення екрану 4 рази на секунду
+            with Live(generate_table(), refresh_per_second=4) as live:
+                async for page in crawler.crawl():
+                    # Пишемо JSONL відразу, щоб не тримати все в пам'яті
+                    record = {
+                        "url": page.url,
+                        "status": page.status,
+                        "content": page.content,
+                        "text": page.text,
+                        "links": page.links,
+                        "fetch_time": page.fetch_time
+                    }
+                    f.write(json.dumps(record, ensure_ascii=False) + "\n")
+                    f.flush()
+                    live.update(generate_table())
+                    
+    asyncio.run(run())
+    console.print(f"[green]Краулінг завершено! Дані збережено у {out}. Лог: crawl.log[/green]")
 
 if __name__ == "__main__":
     app()

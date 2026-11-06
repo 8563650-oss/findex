@@ -1,23 +1,17 @@
-# Findex - Search Engine (Lab 3)
+## Lab 6: Asyncio Crawler
 
-This repository contains the third iteration of the `findex` search engine. In this phase, we transitioned the inverted index to a robust Object-Oriented model using Python's Data Model (dunder methods), implemented ranking algorithms (TF-IDF and BM25), built an AST-based query parser, and applied decorators for caching and profiling.
+This iteration introduces a high-performance, asynchronous web crawler built with `asyncio` and `httpx`. The crawler supports concurrent HTTP requests, respects `robots.txt` (with caching per host), implements exponential backoff with jitter for 429/5xx responses, and parses HTML streams out to JSONL to limit memory consumption.
 
-## Decorators & Context Managers
-We implemented a custom `@timed` decorator using `functools.wraps` to profile execution time, and used `@lru_cache` to cache search results. The index lifecycle is managed via a `with open_index()` context manager to ensure safe resource allocation and teardown. 
+### Benchmark Results (Target: `https://docs.python.org/3/`, 200 pages)
 
-**Execution Logs:**
-```text
-=== Building Index ===
-[build] executed in 2.2187 seconds.
-[save] executed in 0.0665 seconds.
-<Index: 1000 70 docs terms,>
+| Concurrency | Wall Time | Pages/sec | Errors | Peak RSS (MB) |
+|-------------|-----------|-----------|--------|---------------|
+| 1           | ~260 s    | 0.77      | 10     | ~ 30 MB       |
+| 5           | ~185 s    | 1.08      | 0      | ~ 35 MB       |
+| 20          | ~178 s    | 1.12      | 10     | ~ 40 MB       |
 
-=== Sanity Checks (BM25) ===
-Opening index from index.bin...
-[load] executed in 0.0663 seconds.
-
---- Cache Test ---
-First call:
-[search] executed in 0.0018 seconds.
-Second call (should be instant due to cache):
-[search] executed in 0.0000 seconds.
+### Reflection
+* **Why 20 concurrent requests in 1 thread is faster than multiprocessing (Lab 5):** Web crawling is heavily I/O-bound. The CPU spends most of its time waiting for network packets. `asyncio`'s event loop multiplexes these wait times over a single thread, completely avoiding the heavy overhead of OS process creation and IPC context switching.
+* **Why the per-host rate limit is kept (and its cost):** The per-host limit (`asyncio.Lock` + 0.5s sleep) prevents our crawler from accidentally DDoS-ing a target server or triggering 429 Too Many Requests bans. The cost of this limit is visible in our benchmark: when crawling a single domain, a concurrency of 20 is barely faster than 5, because all workers are bottlenecked by the same host lock.
+* **Blocking the Event Loop:** If we ran our heavy CPU-bound indexing process (`findex index`) inside the asyncio coroutine without delegating it to an executor, the entire event loop would block. No new HTTP requests would be sent, timeouts would trigger, and the queue would stall.
+* **Error handling log snippet:**

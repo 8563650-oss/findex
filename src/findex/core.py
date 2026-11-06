@@ -1,7 +1,11 @@
 import re
 import unicodedata
+import json
 from pathlib import Path
-from typing import Iterator
+import time
+import logging
+from functools import wraps
+from typing import Iterator, Callable, Any, TypeVar, cast
 
 TOKEN_PATTERN = re.compile(r"(?u)\b\w+(?:[-']\w+)*\b")
 
@@ -18,12 +22,6 @@ def tokenize(text: str) -> Iterator[str]:
     normalized_text = unicodedata.normalize("NFKC", text).lower()
     for match in TOKEN_PATTERN.finditer(normalized_text):
         yield match.group()
-
-
-import time
-import logging
-from functools import wraps
-from typing import Callable, Any, TypeVar, cast
 
 logger = logging.getLogger("findex")
 
@@ -63,3 +61,17 @@ def generate_snippet(text: str, query_terms: set[str], window: int = 80) -> str:
     prefix = "..." if start > 0 else ""
     suffix = "..." if end < len(text) else ""
     return prefix + snippet + suffix
+
+def iter_jsonl_documents(filepath: str | Path) -> Iterator[str]:
+    """Читає JSONL-файл сторінка за сторінкою, щоб не забивати пам'ять."""
+    path = Path(filepath)
+    if not path.exists():
+        raise FileNotFoundError(f"Файл {path} не знайдено.")
+        
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            data = json.loads(line)
+            # Ми повертаємо очищений текст для індексатора
+            yield data.get("text", "")

@@ -1,0 +1,399 @@
+2026-11-06 22:55:38,677 - INFO - [https://peps.python.org/] Blocked by robots.txt
+2026-11-06 22:55:38,950 - INFO - [https://wiki.python.org/moin/BeginnersGuide] Blocked by robots.txt
+2026-11-06 22:55:38,951 - INFO - [https://wiki.python.org/moin/PythonBooks] Blocked by robots.txt
+2026-11-06 22:55:59,339 - INFO - [https://donate.python.org/] Blocked by robots.txt
+2026-11-06 22:55:59,635 - INFO - [https://www.linkedin.com/company/python-software-foundation/] Blocked by robots.txt
+2026-11-06 22:56:00,238 - INFO - [https://twitter.com/ThePSF] Blocked by robots.txt
+2026-11-06 22:56:04,187 - INFO - [https://wiki.python.org/python/getting-started/BeginnersGuide.html] Blocked by robots.txt
+2026-11-06 22:56:04,325 - INFO - [https://translations.python.org/] Blocked by robots.txt
+2026-11-06 22:56:08,818 - INFO - [https://wiki.python.org/moin/] Blocked by robots.txt
+2026-11-06 22:56:18,371 - INFO - [https://blog.python.org/] Blocked by robots.txt
+2026-11-06 22:56:18,915 - INFO - [https://planetpython.org/] Blocked by robots.txt
+2026-11-06 22:56:20,137 - INFO - [https://wiki.python.org/moin/PythonEventsCalendar] Blocked by robots.txt
+2026-11-06 22:56:24,239 - INFO - [https://jobs.python.org/] Blocked by robots.txt
+2026-11-06 22:56:25,761 - INFO - [https://blog.python.org/2026/10/python-3152-31410-31318-31216-31118/] Blocked by robots.txt
+2026-11-06 22:56:32,054 - INFO - [https://en.wikipedia.org/wiki/Tkinter] Blocked by robots.txt
+2026-11-06 22:56:32,649 - INFO - [https://pygobject.gnome.org/] Blocked by robots.txt
+2026-11-06 22:56:38,003 - WARNING - Could not fetch https://wiki.qt.io/robots.txt. Assuming allowed.
+2026-11-06 22:56:38,004 - INFO - [https://wiki.qt.io/Qt_for_Python] Blocked by robots.txt
+2026-11-06 22:56:38,156 - ERROR - [https://docs.python.org/3/archives/python-3.15-docs.epub] Failed: . Retrying... (Attempt 1/3)
+2026-11-06 22:56:43,008 - WARNING - Could not fetch https://kivy.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:43,009 - INFO - [https://kivy.org/] Blocked by robots.txt
+2026-11-06 22:56:44,485 - ERROR - [https://docs.python.org/3/archives/python-3.15-docs.epub] Failed: . Retrying... (Attempt 2/3)
+2026-11-06 22:56:45,159 - ERROR - [https://www.python.org/events/calendars/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 1/3)
+2026-11-06 22:56:45,159 - WARNING - Could not fetch https://www.wxpython.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,160 - INFO - [https://www.wxpython.org/] Blocked by robots.txt
+2026-11-06 22:56:45,167 - WARNING - Could not fetch https://dearpygui.readthedocs.io/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,167 - INFO - [https://dearpygui.readthedocs.io/en/latest/] Blocked by robots.txt
+2026-11-06 22:56:45,170 - WARNING - Could not fetch https://pytorch.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,170 - INFO - [https://pytorch.org/] Blocked by robots.txt
+2026-11-06 22:56:45,172 - WARNING - Could not fetch https://www.tensorflow.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,172 - INFO - [https://www.tensorflow.org/] Blocked by robots.txt
+2026-11-06 22:56:45,174 - WARNING - Could not fetch https://scikit-learn.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,175 - INFO - [https://scikit-learn.org/] Blocked by robots.txt
+2026-11-06 22:56:45,176 - WARNING - Could not fetch https://huggingface.co/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,176 - INFO - [https://huggingface.co/docs/transformers/] Blocked by robots.txt
+2026-11-06 22:56:45,177 - WARNING - Could not fetch https://docs.anthropic.com/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,177 - INFO - [https://docs.anthropic.com/] Blocked by robots.txt
+2026-11-06 22:56:45,181 - WARNING - Could not fetch https://langchain.com/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,181 - INFO - [https://langchain.com/] Blocked by robots.txt
+2026-11-06 22:56:45,182 - WARNING - Could not fetch https://scipy.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,182 - INFO - [https://scipy.org/] Blocked by robots.txt
+2026-11-06 22:56:45,184 - WARNING - Could not fetch https://pandas.pydata.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,184 - INFO - [https://pandas.pydata.org/] Blocked by robots.txt
+2026-11-06 22:56:45,186 - WARNING - Could not fetch https://ipython.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,186 - INFO - [https://ipython.org/] Blocked by robots.txt
+2026-11-06 22:56:45,188 - WARNING - Could not fetch https://buildbot.net/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,188 - INFO - [https://buildbot.net/] Blocked by robots.txt
+2026-11-06 22:56:45,191 - WARNING - Could not fetch https://trac.edgewall.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,191 - INFO - [https://trac.edgewall.org/] Blocked by robots.txt
+2026-11-06 22:56:45,192 - WARNING - Could not fetch https://www.roundup-tracker.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,192 - INFO - [https://www.roundup-tracker.org/] Blocked by robots.txt
+2026-11-06 22:56:45,196 - WARNING - Could not fetch https://docs.ansible.com/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,197 - INFO - [https://docs.ansible.com/] Blocked by robots.txt
+2026-11-06 22:56:45,199 - WARNING - Could not fetch https://saltproject.io/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,199 - INFO - [https://saltproject.io/] Blocked by robots.txt
+2026-11-06 22:56:45,202 - WARNING - Could not fetch https://www.openstack.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,202 - INFO - [https://www.openstack.org/] Blocked by robots.txt
+2026-11-06 22:56:45,204 - WARNING - Could not fetch https://xon.sh/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,204 - INFO - [https://xon.sh/] Blocked by robots.txt
+2026-11-06 22:56:45,206 - WARNING - Could not fetch https://github.com/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,207 - INFO - [https://github.com/python/cpython/issues] Blocked by robots.txt
+2026-11-06 22:56:45,209 - WARNING - Could not fetch https://mail.python.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,209 - INFO - [https://mail.python.org/mailman/listinfo/python-dev] Blocked by robots.txt
+2026-11-06 22:56:45,209 - INFO - [https://github.com/python/pythondotorg/issues] Blocked by robots.txt
+2026-11-06 22:56:45,211 - WARNING - Could not fetch https://status.python.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:45,211 - INFO - [https://status.python.org/] Blocked by robots.txt
+2026-11-06 22:56:46,219 - ERROR - [https://www.python.org/events/calendars/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 2/3)
+2026-11-06 22:56:46,926 - ERROR - [https://docs.python.org/3/archives/python-3.15-docs.epub] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 3/3)
+2026-11-06 22:56:48,522 - ERROR - [https://www.python.org/events/calendars/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 3/3)
+2026-11-06 22:56:51,603 - ERROR - [https://docs.python.org/3.15/archives/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 1/3)
+2026-11-06 22:56:53,079 - ERROR - [https://docs.python.org/3.15/archives/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 2/3)
+2026-11-06 22:56:53,495 - WARNING - Could not fetch https://policies.python.org/robots.txt. Assuming allowed.
+2026-11-06 22:56:53,495 - INFO - [https://policies.python.org/python.org/Privacy-Notice/] Blocked by robots.txt
+2026-11-06 22:56:53,499 - ERROR - [https://www.python.org/events/python-user-group/2253/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 1/3)
+2026-11-06 22:56:54,669 - ERROR - [https://www.python.org/events/python-user-group/2253/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 2/3)
+2026-11-06 22:56:55,386 - ERROR - [https://docs.python.org/3.15/archives/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 3/3)
+2026-11-06 22:56:57,009 - ERROR - [https://www.python.org/events/python-user-group/2253/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 3/3)
+2026-11-06 22:57:00,159 - ERROR - [https://docs.python.org/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 1/3)
+2026-11-06 22:57:01,473 - ERROR - [https://docs.python.org/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 2/3)
+2026-11-06 22:57:01,609 - ERROR - [https://www.python.org/events/python-user-group/2249/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 1/3)
+2026-11-06 22:57:02,930 - ERROR - [https://www.python.org/events/python-user-group/2249/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 2/3)
+2026-11-06 22:57:03,636 - ERROR - [https://docs.python.org/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 3/3)
+2026-11-06 22:57:05,317 - ERROR - [https://www.python.org/events/python-user-group/2249/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 3/3)
+2026-11-06 22:57:08,323 - ERROR - [https://docs.python.org/3/faq/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 1/3)
+2026-11-06 22:57:09,618 - ERROR - [https://docs.python.org/3/faq/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 2/3)
+2026-11-06 22:57:10,152 - ERROR - [https://www.python.org/events/python-user-group/2254/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 1/3)
+2026-11-06 22:57:11,541 - ERROR - [https://www.python.org/events/python-user-group/2254/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 2/3)
+2026-11-06 22:57:11,967 - ERROR - [https://docs.python.org/3/faq/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 3/3)
+2026-11-06 22:57:13,602 - ERROR - [https://www.python.org/events/python-user-group/2254/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 3/3)
+2026-11-06 22:57:16,850 - ERROR - [https://docs.python.org/3/tutorial/controlflow.html] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 1/3)
+2026-11-06 22:57:18,041 - ERROR - [https://docs.python.org/3/tutorial/controlflow.html] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 2/3)
+2026-11-06 22:57:18,298 - ERROR - [https://www.python.org/events/python-user-group/2212/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 1/3)
+2026-11-06 22:57:19,673 - ERROR - [https://www.python.org/events/python-user-group/2212/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 2/3)
+2026-11-06 22:57:20,072 - ERROR - [https://docs.python.org/3/tutorial/controlflow.html] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 3/3)
+2026-11-06 22:57:21,718 - ERROR - [https://www.python.org/events/python-user-group/2212/] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 3/3)
+2026-11-06 22:57:24,638 - ERROR - [https://docs.python.org/3/tutorial/introduction.html] Failed: [Errno 8] nodename nor servname provided, or not known. Retrying... (Attempt 1/3)
+2026-11-06 22:57:48,596 - INFO - [https://docs.python.org/release/3.15.2/] Blocked by robots.txt
+2026-11-06 22:57:48,598 - INFO - [https://docs.python.org/release/3.15.1/] Blocked by robots.txt
+2026-11-06 22:57:48,598 - INFO - [https://docs.python.org/release/3.15.0/] Blocked by robots.txt
+2026-11-06 22:57:48,598 - INFO - [https://docs.python.org/release/3.14.10/] Blocked by robots.txt
+2026-11-06 22:57:48,599 - INFO - [https://docs.python.org/release/3.14.9/] Blocked by robots.txt
+2026-11-06 22:57:48,599 - INFO - [https://docs.python.org/release/3.14.8/] Blocked by robots.txt
+2026-11-06 22:57:48,599 - INFO - [https://docs.python.org/release/3.14.7/] Blocked by robots.txt
+2026-11-06 22:57:48,599 - INFO - [https://docs.python.org/release/3.14.6/] Blocked by robots.txt
+2026-11-06 22:57:48,599 - INFO - [https://docs.python.org/release/3.14.5/] Blocked by robots.txt
+2026-11-06 22:57:48,600 - INFO - [https://docs.python.org/release/3.14.4/] Blocked by robots.txt
+2026-11-06 22:57:48,600 - INFO - [https://docs.python.org/release/3.14.3/] Blocked by robots.txt
+2026-11-06 22:57:48,600 - INFO - [https://docs.python.org/release/3.14.2/] Blocked by robots.txt
+2026-11-06 22:57:48,600 - INFO - [https://docs.python.org/release/3.14.1/] Blocked by robots.txt
+2026-11-06 22:57:48,600 - INFO - [https://docs.python.org/release/3.14.0/] Blocked by robots.txt
+2026-11-06 22:57:48,600 - INFO - [https://docs.python.org/release/3.13.18/] Blocked by robots.txt
+2026-11-06 22:57:48,600 - INFO - [https://docs.python.org/release/3.13.17/] Blocked by robots.txt
+2026-11-06 22:57:48,601 - INFO - [https://docs.python.org/release/3.13.16/] Blocked by robots.txt
+2026-11-06 22:57:48,601 - INFO - [https://docs.python.org/release/3.13.15/] Blocked by robots.txt
+2026-11-06 22:57:48,601 - INFO - [https://docs.python.org/release/3.13.14/] Blocked by robots.txt
+2026-11-06 22:57:48,601 - INFO - [https://docs.python.org/release/3.13.13/] Blocked by robots.txt
+2026-11-06 22:57:48,601 - INFO - [https://docs.python.org/release/3.13.12/] Blocked by robots.txt
+2026-11-06 22:57:48,601 - INFO - [https://docs.python.org/release/3.13.11/] Blocked by robots.txt
+2026-11-06 22:57:48,601 - INFO - [https://docs.python.org/release/3.13.10/] Blocked by robots.txt
+2026-11-06 22:57:48,601 - INFO - [https://docs.python.org/release/3.13.9/] Blocked by robots.txt
+2026-11-06 22:57:48,602 - INFO - [https://docs.python.org/release/3.13.8/] Blocked by robots.txt
+2026-11-06 22:57:48,602 - INFO - [https://docs.python.org/release/3.13.7/] Blocked by robots.txt
+2026-11-06 22:57:48,602 - INFO - [https://docs.python.org/release/3.13.6/] Blocked by robots.txt
+2026-11-06 22:57:48,602 - INFO - [https://docs.python.org/release/3.13.5/] Blocked by robots.txt
+2026-11-06 22:57:48,602 - INFO - [https://docs.python.org/release/3.13.4/] Blocked by robots.txt
+2026-11-06 22:57:48,602 - INFO - [https://docs.python.org/release/3.13.3/] Blocked by robots.txt
+2026-11-06 22:57:48,602 - INFO - [https://docs.python.org/release/3.13.2/] Blocked by robots.txt
+2026-11-06 22:57:48,603 - INFO - [https://docs.python.org/release/3.13.1/] Blocked by robots.txt
+2026-11-06 22:57:48,603 - INFO - [https://docs.python.org/release/3.13.0/] Blocked by robots.txt
+2026-11-06 22:57:48,603 - INFO - [https://docs.python.org/release/3.12.16/] Blocked by robots.txt
+2026-11-06 22:57:48,603 - INFO - [https://docs.python.org/release/3.12.15/] Blocked by robots.txt
+2026-11-06 22:57:48,604 - INFO - [https://docs.python.org/release/3.12.14/] Blocked by robots.txt
+2026-11-06 22:57:48,604 - INFO - [https://docs.python.org/release/3.12.13/] Blocked by robots.txt
+2026-11-06 22:57:48,604 - INFO - [https://docs.python.org/release/3.12.12/] Blocked by robots.txt
+2026-11-06 22:57:48,604 - INFO - [https://docs.python.org/release/3.12.11/] Blocked by robots.txt
+2026-11-06 22:57:48,605 - INFO - [https://docs.python.org/release/3.12.10/] Blocked by robots.txt
+2026-11-06 22:57:48,605 - INFO - [https://docs.python.org/release/3.12.9/] Blocked by robots.txt
+2026-11-06 22:57:48,605 - INFO - [https://docs.python.org/release/3.12.8/] Blocked by robots.txt
+2026-11-06 22:57:48,605 - INFO - [https://docs.python.org/release/3.12.7/] Blocked by robots.txt
+2026-11-06 22:57:48,605 - INFO - [https://docs.python.org/release/3.12.6/] Blocked by robots.txt
+2026-11-06 22:57:48,605 - INFO - [https://docs.python.org/release/3.12.5/] Blocked by robots.txt
+2026-11-06 22:57:48,605 - INFO - [https://docs.python.org/release/3.12.4/] Blocked by robots.txt
+2026-11-06 22:57:48,606 - INFO - [https://docs.python.org/release/3.12.3/] Blocked by robots.txt
+2026-11-06 22:57:48,606 - INFO - [https://docs.python.org/release/3.12.2/] Blocked by robots.txt
+2026-11-06 22:57:48,606 - INFO - [https://docs.python.org/release/3.12.1/] Blocked by robots.txt
+2026-11-06 22:57:48,606 - INFO - [https://docs.python.org/release/3.12.0/] Blocked by robots.txt
+2026-11-06 22:57:48,606 - INFO - [https://docs.python.org/release/3.11.18/] Blocked by robots.txt
+2026-11-06 22:57:48,606 - INFO - [https://docs.python.org/release/3.11.17/] Blocked by robots.txt
+2026-11-06 22:57:48,606 - INFO - [https://docs.python.org/release/3.11.16/] Blocked by robots.txt
+2026-11-06 22:57:48,606 - INFO - [https://docs.python.org/release/3.11.15/] Blocked by robots.txt
+2026-11-06 22:57:48,607 - INFO - [https://docs.python.org/release/3.11.14/] Blocked by robots.txt
+2026-11-06 22:57:48,607 - INFO - [https://docs.python.org/release/3.11.13/] Blocked by robots.txt
+2026-11-06 22:57:48,607 - INFO - [https://docs.python.org/release/3.11.12/] Blocked by robots.txt
+2026-11-06 22:57:48,607 - INFO - [https://docs.python.org/release/3.11.11/] Blocked by robots.txt
+2026-11-06 22:57:48,607 - INFO - [https://docs.python.org/release/3.11.10/] Blocked by robots.txt
+2026-11-06 22:57:48,607 - INFO - [https://docs.python.org/release/3.11.9/] Blocked by robots.txt
+2026-11-06 22:57:48,607 - INFO - [https://docs.python.org/release/3.11.8/] Blocked by robots.txt
+2026-11-06 22:57:48,607 - INFO - [https://docs.python.org/release/3.11.7/] Blocked by robots.txt
+2026-11-06 22:57:48,608 - INFO - [https://docs.python.org/release/3.11.6/] Blocked by robots.txt
+2026-11-06 22:57:48,608 - INFO - [https://docs.python.org/release/3.11.5/] Blocked by robots.txt
+2026-11-06 22:57:48,608 - INFO - [https://docs.python.org/release/3.11.4/] Blocked by robots.txt
+2026-11-06 22:57:48,608 - INFO - [https://docs.python.org/release/3.11.3/] Blocked by robots.txt
+2026-11-06 22:57:48,608 - INFO - [https://docs.python.org/release/3.11.2/] Blocked by robots.txt
+2026-11-06 22:57:48,608 - INFO - [https://docs.python.org/release/3.11.1/] Blocked by robots.txt
+2026-11-06 22:57:48,608 - INFO - [https://docs.python.org/release/3.11.0/] Blocked by robots.txt
+2026-11-06 22:57:48,608 - INFO - [https://docs.python.org/release/3.10.22/] Blocked by robots.txt
+2026-11-06 22:57:48,608 - INFO - [https://docs.python.org/release/3.10.21/] Blocked by robots.txt
+2026-11-06 22:57:48,609 - INFO - [https://docs.python.org/release/3.10.20/] Blocked by robots.txt
+2026-11-06 22:57:48,609 - INFO - [https://docs.python.org/release/3.10.19/] Blocked by robots.txt
+2026-11-06 22:57:48,609 - INFO - [https://docs.python.org/release/3.10.18/] Blocked by robots.txt
+2026-11-06 22:57:48,609 - INFO - [https://docs.python.org/release/3.10.17/] Blocked by robots.txt
+2026-11-06 22:57:48,609 - INFO - [https://docs.python.org/release/3.10.16/] Blocked by robots.txt
+2026-11-06 22:57:48,609 - INFO - [https://docs.python.org/release/3.10.15/] Blocked by robots.txt
+2026-11-06 22:57:48,609 - INFO - [https://docs.python.org/release/3.10.14/] Blocked by robots.txt
+2026-11-06 22:57:48,609 - INFO - [https://docs.python.org/release/3.10.13/] Blocked by robots.txt
+2026-11-06 22:57:48,609 - INFO - [https://docs.python.org/release/3.10.12/] Blocked by robots.txt
+2026-11-06 22:57:48,610 - INFO - [https://docs.python.org/release/3.10.11/] Blocked by robots.txt
+2026-11-06 22:57:48,610 - INFO - [https://docs.python.org/release/3.10.10/] Blocked by robots.txt
+2026-11-06 22:57:48,610 - INFO - [https://docs.python.org/release/3.10.9/] Blocked by robots.txt
+2026-11-06 22:57:48,610 - INFO - [https://docs.python.org/release/3.10.8/] Blocked by robots.txt
+2026-11-06 22:57:48,610 - INFO - [https://docs.python.org/release/3.10.7/] Blocked by robots.txt
+2026-11-06 22:57:48,610 - INFO - [https://docs.python.org/release/3.10.6/] Blocked by robots.txt
+2026-11-06 22:57:48,611 - INFO - [https://docs.python.org/release/3.10.5/] Blocked by robots.txt
+2026-11-06 22:57:48,611 - INFO - [https://docs.python.org/release/3.10.4/] Blocked by robots.txt
+2026-11-06 22:57:48,611 - INFO - [https://docs.python.org/release/3.10.3/] Blocked by robots.txt
+2026-11-06 22:57:48,611 - INFO - [https://docs.python.org/release/3.10.2/] Blocked by robots.txt
+2026-11-06 22:57:48,612 - INFO - [https://docs.python.org/release/3.10.1/] Blocked by robots.txt
+2026-11-06 22:57:48,612 - INFO - [https://docs.python.org/release/3.10.0/] Blocked by robots.txt
+2026-11-06 22:57:48,612 - INFO - [https://docs.python.org/release/3.9.25/] Blocked by robots.txt
+2026-11-06 22:57:48,612 - INFO - [https://docs.python.org/release/3.9.24/] Blocked by robots.txt
+2026-11-06 22:57:48,612 - INFO - [https://docs.python.org/release/3.9.23/] Blocked by robots.txt
+2026-11-06 22:57:48,612 - INFO - [https://docs.python.org/release/3.9.22/] Blocked by robots.txt
+2026-11-06 22:57:48,612 - INFO - [https://docs.python.org/release/3.9.21/] Blocked by robots.txt
+2026-11-06 22:57:48,612 - INFO - [https://docs.python.org/release/3.9.20/] Blocked by robots.txt
+2026-11-06 22:57:48,612 - INFO - [https://docs.python.org/release/3.9.19/] Blocked by robots.txt
+2026-11-06 22:57:48,613 - INFO - [https://docs.python.org/release/3.9.18/] Blocked by robots.txt
+2026-11-06 22:57:48,613 - INFO - [https://docs.python.org/release/3.9.17/] Blocked by robots.txt
+2026-11-06 22:57:48,613 - INFO - [https://docs.python.org/release/3.9.16/] Blocked by robots.txt
+2026-11-06 22:57:48,613 - INFO - [https://docs.python.org/release/3.9.15/] Blocked by robots.txt
+2026-11-06 22:57:48,613 - INFO - [https://docs.python.org/release/3.9.14/] Blocked by robots.txt
+2026-11-06 22:57:48,613 - INFO - [https://docs.python.org/release/3.9.13/] Blocked by robots.txt
+2026-11-06 22:57:48,613 - INFO - [https://docs.python.org/release/3.9.12/] Blocked by robots.txt
+2026-11-06 22:57:48,613 - INFO - [https://docs.python.org/release/3.9.11/] Blocked by robots.txt
+2026-11-06 22:57:48,613 - INFO - [https://docs.python.org/release/3.9.10/] Blocked by robots.txt
+2026-11-06 22:57:48,614 - INFO - [https://docs.python.org/release/3.9.9/] Blocked by robots.txt
+2026-11-06 22:57:48,614 - INFO - [https://docs.python.org/release/3.9.8/] Blocked by robots.txt
+2026-11-06 22:57:48,614 - INFO - [https://docs.python.org/release/3.9.7/] Blocked by robots.txt
+2026-11-06 22:57:48,614 - INFO - [https://docs.python.org/release/3.9.6/] Blocked by robots.txt
+2026-11-06 22:57:48,614 - INFO - [https://docs.python.org/release/3.9.5/] Blocked by robots.txt
+2026-11-06 22:57:48,614 - INFO - [https://docs.python.org/release/3.9.4/] Blocked by robots.txt
+2026-11-06 22:57:48,614 - INFO - [https://docs.python.org/release/3.9.3/] Blocked by robots.txt
+2026-11-06 22:57:48,614 - INFO - [https://docs.python.org/release/3.9.2/] Blocked by robots.txt
+2026-11-06 22:57:48,614 - INFO - [https://docs.python.org/release/3.9.1/] Blocked by robots.txt
+2026-11-06 22:57:48,614 - INFO - [https://docs.python.org/release/3.9.0/] Blocked by robots.txt
+2026-11-06 22:57:48,615 - INFO - [https://docs.python.org/release/3.8.20/] Blocked by robots.txt
+2026-11-06 22:57:48,615 - INFO - [https://docs.python.org/release/3.8.19/] Blocked by robots.txt
+2026-11-06 22:57:48,615 - INFO - [https://docs.python.org/release/3.8.18/] Blocked by robots.txt
+2026-11-06 22:57:48,615 - INFO - [https://docs.python.org/release/3.8.17/] Blocked by robots.txt
+2026-11-06 22:57:48,615 - INFO - [https://docs.python.org/release/3.8.16/] Blocked by robots.txt
+2026-11-06 22:57:48,615 - INFO - [https://docs.python.org/release/3.8.15/] Blocked by robots.txt
+2026-11-06 22:57:48,615 - INFO - [https://docs.python.org/release/3.8.14/] Blocked by robots.txt
+2026-11-06 22:57:48,615 - INFO - [https://docs.python.org/release/3.8.13/] Blocked by robots.txt
+2026-11-06 22:57:48,615 - INFO - [https://docs.python.org/release/3.8.12/] Blocked by robots.txt
+2026-11-06 22:57:48,615 - INFO - [https://docs.python.org/release/3.8.11/] Blocked by robots.txt
+2026-11-06 22:57:48,615 - INFO - [https://docs.python.org/release/3.8.10/] Blocked by robots.txt
+2026-11-06 22:57:48,616 - INFO - [https://docs.python.org/release/3.8.9/] Blocked by robots.txt
+2026-11-06 22:57:48,616 - INFO - [https://docs.python.org/release/3.8.8/] Blocked by robots.txt
+2026-11-06 22:57:48,616 - INFO - [https://docs.python.org/release/3.8.7/] Blocked by robots.txt
+2026-11-06 22:57:48,616 - INFO - [https://docs.python.org/release/3.8.6/] Blocked by robots.txt
+2026-11-06 22:57:48,616 - INFO - [https://docs.python.org/release/3.8.5/] Blocked by robots.txt
+2026-11-06 22:57:48,616 - INFO - [https://docs.python.org/release/3.8.4/] Blocked by robots.txt
+2026-11-06 22:57:48,616 - INFO - [https://docs.python.org/release/3.8.3/] Blocked by robots.txt
+2026-11-06 22:57:48,616 - INFO - [https://docs.python.org/release/3.8.2/] Blocked by robots.txt
+2026-11-06 22:57:48,616 - INFO - [https://docs.python.org/release/3.8.1/] Blocked by robots.txt
+2026-11-06 22:57:48,616 - INFO - [https://docs.python.org/release/3.8.0/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.17/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.16/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.15/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.14/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.13/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.12/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.11/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.10/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.9/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.8/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.7/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.6/] Blocked by robots.txt
+2026-11-06 22:57:48,617 - INFO - [https://docs.python.org/release/3.7.5/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.7.4/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.7.3/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.7.2/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.7.1/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.7.0/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.6.15/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.6.14/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.6.13/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.6.12/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.6.11/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.6.10/] Blocked by robots.txt
+2026-11-06 22:57:48,618 - INFO - [https://docs.python.org/release/3.6.9/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.6.8/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.6.7/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.6.6/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.6.5/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.6.4/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.6.3/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.6.2/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.6.1/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.6.0/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.5.10/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.5.9/] Blocked by robots.txt
+2026-11-06 22:57:48,619 - INFO - [https://docs.python.org/release/3.5.8/] Blocked by robots.txt
+2026-11-06 22:57:48,620 - INFO - [https://docs.python.org/release/3.5.7/] Blocked by robots.txt
+2026-11-06 22:57:48,620 - INFO - [https://docs.python.org/release/3.5.6/] Blocked by robots.txt
+2026-11-06 22:57:48,620 - INFO - [https://docs.python.org/release/3.5.5/] Blocked by robots.txt
+2026-11-06 22:57:48,620 - INFO - [https://docs.python.org/release/3.5.4/] Blocked by robots.txt
+2026-11-06 22:57:48,620 - INFO - [https://docs.python.org/release/3.5.3/] Blocked by robots.txt
+2026-11-06 22:57:48,620 - INFO - [https://docs.python.org/release/3.5.2/] Blocked by robots.txt
+2026-11-06 22:57:48,620 - INFO - [https://docs.python.org/release/3.5.1/] Blocked by robots.txt
+2026-11-06 22:57:48,620 - INFO - [https://docs.python.org/release/3.5.0/] Blocked by robots.txt
+2026-11-06 22:57:48,620 - INFO - [https://docs.python.org/release/3.4.10/] Blocked by robots.txt
+2026-11-06 22:57:48,620 - INFO - [https://docs.python.org/release/3.4.9/] Blocked by robots.txt
+2026-11-06 22:57:48,620 - INFO - [https://docs.python.org/release/3.4.8/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.4.7/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.4.6/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.4.5/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.4.4/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.4.3/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.4.2/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.4.1/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.4.0/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.3.7/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.3.6/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.3.5/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.3.4/] Blocked by robots.txt
+2026-11-06 22:57:48,621 - INFO - [https://docs.python.org/release/3.3.3/] Blocked by robots.txt
+2026-11-06 22:57:48,622 - INFO - [https://docs.python.org/release/3.3.2/] Blocked by robots.txt
+2026-11-06 22:57:48,622 - INFO - [https://docs.python.org/release/3.3.1/] Blocked by robots.txt
+2026-11-06 22:57:48,622 - INFO - [https://docs.python.org/release/3.3.0/] Blocked by robots.txt
+2026-11-06 22:57:48,622 - INFO - [https://docs.python.org/release/3.2.6/] Blocked by robots.txt
+2026-11-06 22:57:48,622 - INFO - [https://docs.python.org/release/3.2.5/] Blocked by robots.txt
+2026-11-06 22:57:48,622 - INFO - [https://docs.python.org/release/3.2.4/] Blocked by robots.txt
+2026-11-06 22:57:48,622 - INFO - [https://docs.python.org/release/3.2.3/] Blocked by robots.txt
+2026-11-06 22:57:48,622 - INFO - [https://docs.python.org/release/3.2.2/] Blocked by robots.txt
+2026-11-06 22:57:48,622 - INFO - [https://docs.python.org/release/3.2.1/] Blocked by robots.txt
+2026-11-06 22:57:48,622 - INFO - [https://docs.python.org/release/3.2/] Blocked by robots.txt
+2026-11-06 22:57:48,622 - INFO - [https://docs.python.org/release/3.1.5/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/3.1.4/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/3.1.3/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/3.1.2/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/3.1.1/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/3.1/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/3.0.1/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/3.0/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/2.7.18/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/2.7.17/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/2.7.16/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/2.7.15/] Blocked by robots.txt
+2026-11-06 22:57:48,623 - INFO - [https://docs.python.org/release/2.7.14/] Blocked by robots.txt
+2026-11-06 22:57:48,624 - INFO - [https://docs.python.org/release/2.7.13/] Blocked by robots.txt
+2026-11-06 22:57:48,624 - INFO - [https://docs.python.org/release/2.7.12/] Blocked by robots.txt
+2026-11-06 22:57:48,624 - INFO - [https://docs.python.org/release/2.7.11/] Blocked by robots.txt
+2026-11-06 22:57:48,624 - INFO - [https://docs.python.org/release/2.7.10/] Blocked by robots.txt
+2026-11-06 22:57:48,624 - INFO - [https://docs.python.org/release/2.7.9/] Blocked by robots.txt
+2026-11-06 22:57:48,624 - INFO - [https://docs.python.org/release/2.7.8/] Blocked by robots.txt
+2026-11-06 22:57:48,624 - INFO - [https://docs.python.org/release/2.7.7/] Blocked by robots.txt
+2026-11-06 22:57:48,624 - INFO - [https://docs.python.org/release/2.7.6/] Blocked by robots.txt
+2026-11-06 22:57:48,624 - INFO - [https://docs.python.org/release/2.7.5/] Blocked by robots.txt
+2026-11-06 22:57:48,625 - INFO - [https://docs.python.org/release/2.7.4/] Blocked by robots.txt
+2026-11-06 22:57:48,625 - INFO - [https://docs.python.org/release/2.7.3/] Blocked by robots.txt
+2026-11-06 22:57:48,625 - INFO - [https://docs.python.org/release/2.7.2/] Blocked by robots.txt
+2026-11-06 22:57:48,625 - INFO - [https://docs.python.org/release/2.7.1/] Blocked by robots.txt
+2026-11-06 22:57:48,625 - INFO - [https://docs.python.org/release/2.7/] Blocked by robots.txt
+2026-11-06 22:57:48,625 - INFO - [https://docs.python.org/release/2.6.9/] Blocked by robots.txt
+2026-11-06 22:57:48,625 - INFO - [https://docs.python.org/release/2.6.8/] Blocked by robots.txt
+2026-11-06 22:57:48,625 - INFO - [https://docs.python.org/release/2.6.7/] Blocked by robots.txt
+2026-11-06 22:57:48,625 - INFO - [https://docs.python.org/release/2.6.6/] Blocked by robots.txt
+2026-11-06 22:57:48,625 - INFO - [https://docs.python.org/release/2.6.5/] Blocked by robots.txt
+2026-11-06 22:57:48,625 - INFO - [https://docs.python.org/release/2.6.4/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.6.3/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.6.2/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.6.1/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.6/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.5.4/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.5.3/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.5.2/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.5.1/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.5/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.4.4/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.4.3/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.4.2/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.4.1/] Blocked by robots.txt
+2026-11-06 22:57:48,626 - INFO - [https://docs.python.org/release/2.4/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.3.5/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.3.4/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.3.3/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.3.2/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.3.1/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.3/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.2.3/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.2.2/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.2.1/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.2p1/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.2/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.1.3/] Blocked by robots.txt
+2026-11-06 22:57:48,627 - INFO - [https://docs.python.org/release/2.1.2/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/2.1.1/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/2.1/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/2.0.1/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/2.0/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/1.6/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/1.5.2p2/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/1.5.2p1/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/1.5.2/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/1.5.1p1/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/1.5.1/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/1.5/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/release/1.4/] Blocked by robots.txt
+2026-11-06 22:57:48,628 - INFO - [https://docs.python.org/dev/] Blocked by robots.txt
+2026-11-06 22:57:51,904 - INFO - [https://podcasters.spotify.com/pod/show/corepy] Blocked by robots.txt
+2026-11-06 22:57:59,433 - INFO - [https://podcasters.spotify.com/pod/show/sad-python-girls-club] Blocked by robots.txt
+2026-11-06 22:58:04,499 - WARNING - Could not fetch http://radiofreepython.com/robots.txt. Assuming allowed.
+2026-11-06 22:58:04,501 - INFO - [http://radiofreepython.com/] Blocked by robots.txt
+2026-11-06 22:58:05,141 - INFO - [http://frompythonimportpodcast.com/] Blocked by robots.txt
+2026-11-06 22:58:09,729 - WARNING - Could not fetch http://bitofpython.com/robots.txt. Assuming allowed.
+2026-11-06 22:58:09,729 - INFO - [http://bitofpython.com/] Blocked by robots.txt
+2026-11-06 22:58:09,936 - INFO - [http://www.voidspace.org.uk/] Blocked by robots.txt
+2026-11-06 22:58:12,737 - INFO - [http://www.amk.ca/diary/] Blocked by robots.txt
+2026-11-06 22:58:14,112 - INFO - [http://jessenoller.com/] Blocked by robots.txt
+2026-11-06 22:58:19,119 - WARNING - Could not fetch http://www.awaretek.com/robots.txt. Assuming allowed.
+2026-11-06 22:58:19,119 - INFO - [http://www.awaretek.com/python/] Blocked by robots.txt
+2026-11-06 22:58:19,617 - INFO - [http://johnbokma.com/firefox/rss-and-live-bookmarks.html] Blocked by robots.txt
+2026-11-06 22:58:21,094 - INFO - [http://www.jython.org/jythonpodcast/] Blocked by robots.txt
+2026-11-06 22:58:21,149 - WARNING - Could not fetch http://advocacy.python.org/robots.txt. Assuming allowed.
+2026-11-06 22:58:21,150 - INFO - [http://advocacy.python.org/podcasts/] Blocked by robots.txt
+2026-11-06 22:58:21,610 - INFO - [http://www.pycon.org/] Blocked by robots.txt
+2026-11-06 22:58:24,106 - INFO - [http://www.awaretek.com/python/index.xml] Blocked by robots.txt
+2026-11-06 22:58:27,614 - ERROR - [http://djangodose.com/podcasts/] Failed: . Retrying... (Attempt 1/3)
+2026-11-06 22:58:34,507 - ERROR - [http://djangodose.com/podcasts/] Failed: . Retrying... (Attempt 2/3)
