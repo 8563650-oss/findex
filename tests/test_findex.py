@@ -113,7 +113,7 @@ def test_cli_full_pipeline(tmp_path: Path, mini_corpus: Path):
     
     res_search = runner.invoke(app, ["search", "python AND stream", "--index-path", str(idx_file)])
     assert res_search.exit_code == 0
-    assert "python" in res_search.output
+    assert "doc1" in res_search.output
 
     res_json = runner.invoke(app, ["search", "python AND stream", "--index-path", str(idx_file), "--json"])
     assert res_json.exit_code == 0

@@ -68,3 +68,16 @@ class RankedSearcher:
                     
         results = [SearchResult(score=s, doc_id=d) for d, s in doc_scores.items()]
         return heapq.nlargest(top_k, results)
+
+def parse_query(query_str: str) -> QueryNode:
+    """Точка входу для парсингу рядка запиту в AST."""
+    tokens = query_str.lower().split()
+    if not tokens:
+        return Term("___EMPTY___")
+        
+    node = Term(tokens[0])
+    for token in tokens[1:]:
+        if token not in ("and", "or"):
+            node = And(node, Term(token))
+            
+    return node

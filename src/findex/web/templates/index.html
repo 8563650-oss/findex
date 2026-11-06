@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Findex Web Search</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
+        h1 { color: #2c3e50; }
+        .search-box { display: flex; gap: 10px; margin-bottom: 30px; }
+        input[type="text"] { flex: 1; padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px; }
+        button { padding: 12px 24px; background: #0066cc; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; }
+        button:hover { background: #0052a3; }
+        .result-item { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        .result-title { font-size: 18px; color: #1a0dab; text-decoration: none; }
+        .result-meta { font-size: 14px; color: #006621; }
+        .result-snippet { font-size: 14px; color: #4d4d4d; margin-top: 5px; }
+        .stats { font-size: 13px; color: #666; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Findex Search</h1>
+    <form action="/search-ui" method="get" class="search-box">
+        <input type="text" name="q" value="{{ query or '' }}" placeholder="Введіть пошуковий запит..." required>
+        <button type="submit">Шукати</button>
+    </form>
+
+    {% if results is not none %}
+        <div class="stats">Знайдено результатів: {{ total_results }} (за {{ "%.2f"|format(time_ms) }} мс)</div>
+        
+        {% for item in results %}
+            <div class="result-item">
+                <a href="/docs/{{ item.doc_id }}" class="result-title">[{{ item.doc_id }}] {{ item.name }}</a>
+                <div class="result-meta">Score: {{ "%.4f"|format(item.score) }}</div>
+                <div class="result-snippet">{{ item.snippet }}</div>
+            </div>
+        {% else %}
+            <p>Нічого не знайдено за вашим запитом.</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
