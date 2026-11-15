@@ -20,8 +20,16 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install numpy pytest pytest-cov pytest-benchmark typer rich fastapi uvicorn hypothesis
-          pip install -e .
+          pip install -e .[dev]
+
+      - name: Prepare test corpus and build index
+        env:
+          PYTHONPATH: src
+        run: |
+          mkdir -p data docs
+          echo "python stream search test document one" > data/doc1.txt
+          echo "rare python machine learning document two" > data/doc2.txt
+          python -m findex.cli index data --out index.bin
 
       - name: Run tests & benchmarks
         env:
