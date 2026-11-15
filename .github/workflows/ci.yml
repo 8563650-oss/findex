@@ -22,8 +22,13 @@ jobs:
         with:
           enable-cache: false
 
+      - name: Check environment
+        run: |
+          python --version
+          uv --version
+
       - name: Install dependencies
         run: uv sync --dev
 
       - name: Run tests & benchmarks
-        run: uv run pytest --cov=findex --benchmark-enable
+        run: PYTHONPATH=src uv run pytest --cov=findex --benchmark-enable -v
