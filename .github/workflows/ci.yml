@@ -12,17 +12,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Set up Python
+      - name: Set up Python 3.13
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
 
-      - name: Set up uv
-        uses: astral-sh/setup-uv@v2
-
       - name: Install dependencies
         run: |
-          uv pip install --system -e ".[dev]" numpy pytest pytest-cov pytest-benchmark
+          python -m pip install --upgrade pip
+          pip install numpy pytest pytest-cov pytest-benchmark typer rich fastapi uvicorn hypothesis
+          pip install -e .
 
       - name: Run tests & benchmarks
-        run: PYTHONPATH=src pytest --cov=findex --benchmark-enable -v
+        env:
+          PYTHONPATH: src
+        run: |
+          pytest --cov=findex --benchmark-enable -v
