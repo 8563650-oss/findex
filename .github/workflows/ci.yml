@@ -19,16 +19,10 @@ jobs:
 
       - name: Set up uv
         uses: astral-sh/setup-uv@v2
-        with:
-          enable-cache: false
-
-      - name: Check environment
-        run: |
-          python --version
-          uv --version
 
       - name: Install dependencies
-        run: uv sync --dev
+        run: |
+          uv pip install --system -e ".[dev]" numpy pytest pytest-cov pytest-benchmark
 
       - name: Run tests & benchmarks
-        run: PYTHONPATH=src uv run pytest --cov=findex --benchmark-enable -v
+        run: PYTHONPATH=src pytest --cov=findex --benchmark-enable -v
