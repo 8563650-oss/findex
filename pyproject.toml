@@ -1,3 +1,4 @@
+
 [project]
 name = "findex"
 version = "0.1.0"
@@ -19,8 +20,6 @@ dependencies = [
     "uvicorn>=0.54.0",
 ]
 
-
-
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
 build-backend = "uv_build"
@@ -29,11 +28,13 @@ build-backend = "uv_build"
 dev = [
     "flameprof>=0.4",
     "hypothesis>=6.170.1",
+    "httpx2",
     "pyright>=1.1.414",
     "pytest>=9.1.1",
     "pytest-cov>=7.1.0",
     "ruff>=0.17.1",
 ]
+
 [project.scripts]
 findex = "findex.cli:app"
 
