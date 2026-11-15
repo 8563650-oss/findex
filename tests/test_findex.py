@@ -1,4 +1,5 @@
 import pytest
+import numpy as np
 from hypothesis import given, strategies as st
 from typer.testing import CliRunner
 from pathlib import Path
@@ -9,7 +10,6 @@ from findex.core import tokenize, generate_snippet
 from findex.indexer import Index
 from findex.searcher import Term, And, Or
 from findex.ranking import TfIdfScorer, BM25Scorer
-from findex.models import Posting
 
 runner = CliRunner()
 
@@ -19,7 +19,7 @@ runner = CliRunner()
     ("YOLOv8!", ["yolov8"]),
     ("Дев'ятнадцяте сторіччя", ["дев'ятнадцяте", "сторіччя"]),
     ("state-of-the-art", ["state-of-the-art"]),
-    ("Розділ \u2163", ["розділ", "iv"]),
+    ("Розділ Ⅳ", ["розділ", "iv"]),
     ("   ", []),
     ("!!!", []),
     ("hello, world.", ["hello", "world"]),
@@ -29,7 +29,7 @@ runner = CliRunner()
 def test_tokenizer(text: str, expected: list[str]):
     assert list(tokenize(text)) == expected
 
-# --- 2. Сніпети (Покриття core.py - 5 тестів) ---
+# --- 2. Сніпети (5 тестів) ---
 @pytest.mark.parametrize("text, terms, expected_in_output", [
     ("hello world python", {"python"}, "**PYTHON**"),
     ("a b c d e f g h i j k l m n o p q python", {"python"}, "..."),
@@ -64,32 +64,37 @@ def test_merge_equals_set(list1: list[int], list2: list[int]):
 
 # --- 4. AST Парсер запитів (4 тести) ---
 @pytest.mark.parametrize("tree, expected_docs", [
-    (Term("hello"), {0, 1}),                                # ісправіл
-    (And(Term("hello"), Term("stream")), {1}),              # тоже ісправіл
+    (Term("hello"), {0, 1}),
+    (And(Term("hello"), Term("stream")), {1}),
     (Or(Term("rare"), Term("stream")), {1, 2}),
     (Term("missing"), set()),
 ])
 def test_ast_evaluation(populated_index: Index, tree: Any, expected_docs: set[int]):
     assert tree.evaluate(populated_index) == expected_docs
 
-# --- 5. Логіка Scorer (Sanity Checks - 2 тести) ---
+# --- 5. Логіка Scorer (Sanity Checks) ---
 @pytest.mark.parametrize("scorer_class", [TfIdfScorer, BM25Scorer])
 def test_scorer_sanity_checks(populated_index: Index, scorer_class: Any):
     scorer = scorer_class()
+    
     # 1. Рідкісний термін > Частий термін
-    score_rare = scorer.score(populated_index, "rare", Posting(doc_id=2, frequency=1))
-    score_freq = scorer.score(populated_index, "hello", Posting(doc_id=0, frequency=1))
+    doc_ids_rare, scores_rare = scorer.score_array(populated_index, "rare")
+    score_rare = float(scores_rare[np.where(doc_ids_rare == 2)[0][0]]) if 2 in doc_ids_rare else 0.0
+    
+    doc_ids_freq, scores_freq = scorer.score_array(populated_index, "hello")
+    score_freq = float(scores_freq[np.where(doc_ids_freq == 0)[0][0]]) if 0 in doc_ids_freq else 0.0
+    
     assert score_rare > score_freq
+    
     # 2. Нульовий DF (термін відсутній)
-    assert scorer.score(populated_index, "missing", Posting(doc_id=0, frequency=1)) == 0.0
+    doc_ids_miss, _ = scorer.score_array(populated_index, "missing")
+    assert doc_ids_miss.size == 0
 
-# --- 6. Index та CLI (5 тестів) ---
+# --- 6. Index та CLI ---
 def test_index_properties_and_saveload(populated_index: Index, tmp_path: Path):
     idx = populated_index
-    # type: ignore використовується для доступу до приватного поля, щоб перевірити інваріант сортування в тесті
-    for _, postings in idx._postings.items():  # type: ignore # Прямий доступ до приватного поля для тестування сортування
-        doc_ids = [p.doc_id for p in postings]
-        assert doc_ids == sorted(doc_ids)
+    for _, doc_ids in idx._postings_doc_ids.items():
+        assert np.all(doc_ids[:-1] <= doc_ids[1:])
         
     out_file = tmp_path / "idx.bin"
     idx.save(str(out_file))
